@@ -1,0 +1,119 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="enyblock_note.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Enyblock Note" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="your notes" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <!--define the listbox-->
+            <ListBox Name="notes_listbox"
+                     VerticalAlignment="Stretch"
+                     HorizontalAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <HyperlinkButton Name="note_location_hylinkbutton" 
+                                             FontSize="40"
+                                             HorizontalContentAlignment="Left"
+                                             Content="{Binding m_note_location}"
+                                             Tag="{Binding m_file_name}"
+                                             Click="view_note_hylinkbutton"/>
+                            <TextBlock Name="note_date_created_textblock" 
+                                       Text="{Binding m_note_date_created}" 
+                                       Margin="10"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+            <Canvas Name="help_canvas"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Width="400"
+                    Height="400"
+                    Background="White"
+                    Visibility="Collapsed">
+                <Button Name="help_button_cancle"
+                        Width="50"
+                        Height="50" 
+                        Canvas.Left="350" 
+                        Canvas.Top="0"
+                        Click="help_close_button">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/enyblock_note;component/Images/appbar.close.rest.png" Stretch="None" />
+                    </Button.Background>
+                </Button>
+                <ScrollViewer Name="help_scrollviewer"
+                              Width="400"
+                              Height="300"
+                              Canvas.Top="50"
+                              >
+                    
+                
+                    <TextBlock Name="help_textblock"
+                               Width="380"
+                               Height="800"
+                               TextWrapping="Wrap"
+                               Foreground="Black"
+                               FontSize="24"
+                               >
+                        this is the a simple note program,I think you can use it to remember someting which is you want.
+                        <LineBreak/>
+                        using step:
+                        <LineBreak/>
+                        1. open the program, you would see add button and help button
+                        <LineBreak/>
+                        2. click the add button,and you could edit the note.
+                        <LineBreak/>
+                        3. then you can click cancle button return to notes list page. or click the save button to save this file.
+                        <LineBreak/>
+                        4. in the notes list page, you could click the note name to edit this note.
+                        <LineBreak/>
+                        5. in the edit page, you could click the eidt button to edit this note, then save the note, if you don't want to save this note, you could click the back button.
+                        <LineBreak/>
+                        6. if you want to delet a note, you could click the delte button.
+                        <LineBreak/>
+                        Email : enyblock@nwu.edu.cn
+                        
+                    </TextBlock>
+                
+                </ScrollViewer>
+                
+                
+                
+            </Canvas>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.new.rest.png" Text="add" Click="app_bar_add_click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" Text="help" Click="app_bar_help_click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

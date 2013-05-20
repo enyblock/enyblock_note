@@ -1,0 +1,15 @@
+G:\program\windows phone\code\enyblock_note\enyblock_note\Bin\Debug\ApplicationIcon.png
+G:\program\windows phone\code\enyblock_note\enyblock_note\Bin\Debug\Background.png
+G:\program\windows phone\code\enyblock_note\enyblock_note\Bin\Debug\enyblock_note.dll
+G:\program\windows phone\code\enyblock_note\enyblock_note\Bin\Debug\enyblock_note.pdb
+G:\program\windows phone\code\enyblock_note\enyblock_note\Bin\Debug\AppManifest.xaml
+G:\program\windows phone\code\enyblock_note\enyblock_note\Bin\Debug\enyblock_note.xap
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\ResolveAssemblyReference.cache
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\App.g.i.cs
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\add.g.i.cs
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\MainPage.g.i.cs
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\view_edit.g.i.cs
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\enyblock_note.g.resources
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\enyblock_note.dll
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\enyblock_note.pdb
+G:\program\windows phone\code\enyblock_note\enyblock_note\obj\Debug\XapCacheFile.xml
